@@ -1,0 +1,11 @@
+### Get all contacts
+GET http://localhost:3000/contacts
+
+### Get contact by ID
+GET http://localhost:3000/contacts/678c895b7a6a11100f7a8cf9
+
+###Get all contacts on Render
+GET https://contactsapi-8ndl.onrender.com/contacts
+
+###Get contact by ID on Render
+https://contactsapi-8ndl.onrender.com/contacts/678c895b7a6a11100f7a8cf9

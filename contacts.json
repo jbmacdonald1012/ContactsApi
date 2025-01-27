@@ -19,5 +19,12 @@
     "email": "bwill351@test.com",
     "favoriteColor": "Yellow",
     "birthday": "9/16/1972"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "favoriteColor": "blue",
+    "birthday": "1990-01-01"
   }
 ]

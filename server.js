@@ -1,5 +1,9 @@
+/* eslint-disable no-undef */
+const dotenv = require('dotenv');
 const express = require('express');
 const mongodb = require('./database/connect');
+
+dotenv.config();
 
 const port = process.env.PORT || 3000;
 

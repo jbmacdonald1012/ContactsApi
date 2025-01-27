@@ -4,8 +4,63 @@ GET http://localhost:3000/contacts
 ### Get contact by ID
 GET http://localhost:3000/contacts/678c895b7a6a11100f7a8cf9
 
+### Create a new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "favoriteColor": "blue",
+  "birthday": "1990-01-01"
+}
+
+### Update a contact
+PUT http://localhost:3000/contacts/678c895b7a6a11100f7a8cfb
+Content-Type: application/json
+
+{
+"firstName" :"Brian",
+"lastName" :"Williams",
+"email" : "bwill351@test.com",
+"favoriteColor" : "Yellow",
+"birthday" : "9/16/1972"
+}
+
+### Delete a contact
+DELETE http://localhost:3000/contacts/678c895b7a6a11100f7a8cf9
+
 ###Get all contacts on Render
 GET https://contactsapi-8ndl.onrender.com/contacts
 
 ###Get contact by ID on Render
 https://contactsapi-8ndl.onrender.com/contacts/678c895b7a6a11100f7a8cf9
+
+###Create a new contact on Render
+POST https://contactsapi-8ndl.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "James",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "favoriteColor": "blue",
+  "birthday": "1990-01-01"
+}
+
+###Update a contact on Render
+PUT https://contactsapi-8ndl.onrender.com/contacts/678c895b7a6a11100f7a8cfa
+Content-Type: application/json
+
+{
+  "firstName": "Jordan",
+  "lastName": "Sampson",
+  "email": "jordan.sampsone@example.com",
+  "favoriteColor": "blue",
+  "birthday": "1990-01-01"
+}
+
+###Delete a contact on Render
+DELETE https://contactsapi-8ndl.onrender.com/contacts/678c895b7a6a11100f7a8cfa
+

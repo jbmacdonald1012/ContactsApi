@@ -2,11 +2,20 @@ const express = require('express');
 
 const router = express.Router();
 
-//GetContoller
-const contactsGetController = require('../controllers/contactsGetController');
+//Contoller
+const ContactsController = require('../controllers/contactsController');
+
+//Post Route
+router.post('/', ContactsController.CreateContact);
 
 //Get Routes
-router.get('/', contactsGetController.GetAllContacts);
-router.get('/:id', contactsGetController.GetContactById);
+router.get('/', ContactsController.GetAllContacts);
+router.get('/:id', ContactsController.GetContactById);
+
+//Put Route
+router.put('/:id', ContactsController.UpdateContact);
+
+//Delete Route
+router.delete('/:id', ContactsController.DeleteContact);
 
 module.exports = router;

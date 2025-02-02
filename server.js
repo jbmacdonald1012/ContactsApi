@@ -2,6 +2,8 @@
 const dotenv = require('dotenv');
 const express = require('express');
 const mongodb = require('./database/connect');
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger_output.json');
 
 dotenv.config();
 
@@ -12,7 +14,8 @@ const app = express();
 app
   .use(express.json())
   .use(express.urlencoded({ extended: true }))
-  .use('/', require('./routes'));
+  .use('/', require('./routes'))
+  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 mongodb.initializeDatabase((error) => {
   if (error) {

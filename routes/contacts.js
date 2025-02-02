@@ -6,16 +6,16 @@ const router = express.Router();
 const ContactsController = require('../controllers/contactsController');
 
 //Post Route
-router.post('/', ContactsController.CreateContact);
+router.post('/', ContactsController.createContact);
 
 //Get Routes
-router.get('/', ContactsController.GetAllContacts);
-router.get('/:id', ContactsController.GetContactById);
+router.get('/', ContactsController.getAllContacts);
+router.get('/:id', ContactsController.getContactById);
 
 //Put Route
-router.put('/:id', ContactsController.UpdateContact);
+router.put('/:id', ContactsController.updateContact);
 
 //Delete Route
-router.delete('/:id', ContactsController.DeleteContact);
+router.delete('/:id', ContactsController.deleteContact);
 
 module.exports = router;

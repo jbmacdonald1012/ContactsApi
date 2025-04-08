@@ -6,7 +6,16 @@ const doc = {
     description: 'API for contacts management'
   },
   host: 'localhost:3000',
-  schemes: ['http']
+  schemes: ['http'],
+  definitions: {
+    Contact: {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'john.doe@example.com',
+      favoriteColor: 'blue',
+      birthday: '1990-01-01'
+    }
+  }
 };
 
 const outputFile = './swagger_output.json';

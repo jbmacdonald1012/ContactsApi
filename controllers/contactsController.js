@@ -21,7 +21,16 @@ const getContactById = async (req, res) => {
 };
 
 const createContact = async (req, res) => {
-  const newContact = req.body;
+  const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+
+  const newContact = {
+    firstName,
+    lastName,
+    email,
+    favoriteColor,
+    birthday
+  };
+
   const result = await mongodb.getDatabase('main').collection('contacts').insertOne(newContact);
 
   res.setHeader('Content-Type', 'application/json');
@@ -30,7 +39,16 @@ const createContact = async (req, res) => {
 
 const updateContact = async (req, res) => {
   const contactId = new ObjectId(req.params.id);
-  const updatedContact = req.body;
+  const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+
+  const updatedContact = {
+    firstName,
+    lastName,
+    email,
+    favoriteColor,
+    birthday
+  };
+
   const result = await mongodb
     .getDatabase('main')
     .collection('contacts')
